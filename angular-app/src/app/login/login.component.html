@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.component.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Basic body styling to ensure the login container takes full height */
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2 class="login-heading">Welcome Back</h2> <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="login-form"> <div class="form-group"> <label for="email" class="form-label">Email Address:</label> <div class="input-icon-wrapper">
+          <span class="input-icon">✉️</span>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            [(ngModel)]="email"
+            #emailInput="ngModel"
+            class="form-input" />
+        </div>
+        <div *ngIf="emailInput.invalid && emailInput.touched" class="input-error-message"> Email is required.
+        </div>
+      </div>
+
+      <div class="form-group"> <label for="password" class="form-label">Password:</label> <div class="input-icon-wrapper">
+          <span class="input-icon">🔒</span>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            [(ngModel)]="password"
+            #passwordInput="ngModel"
+            class="form-input" />
+        </div>
+        <div *ngIf="passwordInput.invalid && passwordInput.touched" class="input-error-message"> Password is required.
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid" class="submit-button">Login</button> </form>
+
+    <p *ngIf="errorMessage" class="message-text error">{{ errorMessage }}</p>
+  </div>
+
+</body>
+</html>

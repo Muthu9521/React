@@ -1,0 +1,200 @@
+/* login.component.css - Translated from Tailwind CSS */
+
+/* Base styles for the entire page/container */
+.login-container {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Dark gradient background */
+  background: linear-gradient(to bottom right, #030712 0%, #1e3a8a 100%);
+  font-family: 'Inter', sans-serif; /* Using Inter font as per React component */
+  color: #f3f4f6; /* Light gray text */
+  padding: 1.5rem; /* Equivalent to p-6 */
+  overflow: hidden; /* Ensures background elements stay within bounds */
+  position: relative;
+  box-sizing: border-box; /* Ensure padding is included in element's total width and height */
+}
+
+/* Subtle background animation element */
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; /* Equivalent to inset-0 */
+  /* Gradient for the animated background */
+  background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.1) 0%, rgba(17, 24, 39, 0.1) 50%, rgba(30, 58, 138, 0.1) 100%);
+  opacity: 0.2; /* Equivalent to opacity-20 */
+  animation: pulse-slow 20s infinite ease-in-out; /* Custom animation */
+}
+
+/* Custom keyframe animation for a subtle pulse effect */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+}
+
+/* Heading for the login form */
+.login-heading {
+  font-size: 3rem; /* Equivalent to text-5xl (48px) */
+  font-weight: 800; /* Equivalent to font-extrabold */
+  color: #93c5fd; /* Equivalent to text-blue-300 */
+  margin-bottom: 3rem; /* Equivalent to mb-12 (48px) */
+  text-align: center;
+  letter-spacing: 0.05em; /* Equivalent to tracking-wide */
+  text-shadow: 0 0 15px rgba(147, 197, 253, 0.4); /* Simplified drop-shadow-lg for glow */
+  position: relative;
+  z-index: 1;
+}
+
+/* Login form container */
+.login-form {
+  background-color: rgba(31, 41, 55, 0.4); /* Equivalent to bg-gray-800/40 */
+  backdrop-filter: blur(16px); /* Equivalent to backdrop-blur-lg */
+  border: 1px solid rgba(191, 219, 254, 0.1); /* Equivalent to border border-blue-200/10 */
+  border-radius: 1rem; /* Equivalent to rounded-2xl (16px) */
+  padding: 3rem; /* Equivalent to p-12 (48px) */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Simplified shadow-2xl */
+  width: 100%;
+  max-width: 28rem; /* Equivalent to max-w-md (448px) */
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Equivalent to transition-all duration-300 */
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover effects for the form */
+.login-form:hover {
+  transform: translateY(-8px); /* Equivalent to hover:translate-y-[-8px] */
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5); /* Simplified hover:shadow-3xl */
+}
+
+/* Spacing between form groups */
+.form-group {
+  margin-bottom: 2rem; /* Equivalent to mb-8 (32px) */
+}
+
+/* Label styling */
+.form-label {
+  display: block;
+  margin-bottom: 1rem; /* Equivalent to mb-4 (16px) */
+  color: #bfdbfe; /* Equivalent to text-blue-200 */
+  font-weight: 600; /* Equivalent to font-semibold */
+  font-size: 1.125rem; /* Equivalent to text-lg (18px) */
+  letter-spacing: -0.025em; /* Equivalent to tracking-tight */
+}
+
+/* Input field styling (email and password) */
+.form-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem; /* Equivalent to pl-12 pr-4 py-4 (48px left, 16px right, 16px top/bottom) */
+  border: none;
+  border-bottom: 2px solid rgba(147, 197, 253, 0.4); /* Equivalent to border-b-2 border-blue-300/40 */
+  background-color: transparent;
+  color: #ffffff; /* Equivalent to text-white */
+  font-size: 1.25rem; /* Equivalent to text-xl (20px) */
+  box-sizing: border-box;
+  transition: all 0.2s ease; /* Equivalent to transition-all duration-200 */
+}
+
+/* Placeholder styling for inputs */
+.form-input::placeholder {
+  color: rgba(191, 219, 254, 0.6); /* Equivalent to placeholder-blue-200/60 */
+}
+
+/* Focus styling for inputs */
+.form-input:focus {
+  outline: none;
+  border-bottom-color: #60a5fa; /* Equivalent to focus:border-blue-400 */
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.2); /* Simplified focus:shadow-lg focus:shadow-blue-500/20 */
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle dark tint on focus */
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%;
+  padding: 1.25rem; /* Equivalent to p-5 (20px) */
+  /* Vibrant blue gradient */
+  background: linear-gradient(to right, #2563eb 0%, #1e40af 100%); /* Equivalent to bg-gradient-to-r from-blue-600 to-blue-800 */
+  color: white;
+  border: none;
+  border-radius: 0.5rem; /* Equivalent to rounded-lg (8px) */
+  font-size: 1.5rem; /* Equivalent to text-2xl (24px) */
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Equivalent to transition-all duration-300 */
+  margin-top: 3rem; /* Equivalent to mt-12 (48px) */
+  letter-spacing: 0.1em; /* Equivalent to tracking-widest */
+  text-transform: uppercase;
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.4); /* Simplified shadow-xl shadow-blue-700/40 */
+}
+
+/* Hover effects for the submit button */
+.submit-button:hover:not([disabled]) {
+  background: linear-gradient(to right, #3b82f6 0%, #2563eb 100%); /* Brighter gradient on hover */
+  transform: translateY(-5px) scale(1.02); /* Lift and slight scale */
+  box-shadow: 0 12px 40px rgba(37, 99, 235, 0.6); /* More intense glow */
+}
+
+/* Disabled state for the submit button */
+.submit-button:disabled {
+  background-color: #374151; /* Equivalent to disabled:bg-gray-700 */
+  color: #9ca3af; /* Equivalent to disabled:text-gray-400 */
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+/* General error/success message styling */
+.message-text {
+  margin-top: 2rem; /* Equivalent to mt-8 (32px) */
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem; /* Equivalent to text-base (16px) */
+  line-height: 1.625; /* Equivalent to leading-relaxed */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Simplified drop-shadow-sm */
+}
+
+/* Specific color for success messages */
+.message-text.success {
+  color: #4ade80; /* Equivalent to text-green-400 */
+}
+
+/* Specific color for error messages */
+.message-text.error {
+  color: #f87171; /* Equivalent to text-red-400 */
+}
+
+/* Error message for individual input fields */
+.input-error-message {
+  color: #f87171; /* Equivalent to text-red-400 */
+  font-size: 0.875rem; /* Equivalent to text-sm (14px) */
+  margin-top: 0.5rem; /* Equivalent to mt-2 (8px) */
+  text-align: left;
+}
+
+/* Icon wrapper for positioning */
+.input-icon-wrapper {
+  position: relative;
+}
+
+/* Icon styling */
+.input-icon {
+  position: absolute;
+  left: 1rem; /* Equivalent to left-4 (16px) */
+  top: 50%;
+  transform: translateY(-50%); /* Equivalent to -translate-y-1/2 */
+  color: rgba(147, 197, 253, 0.7); /* Equivalent to text-blue-300/70 */
+  width: 1.25rem; /* Equivalent to size={20} for lucide-react */
+  height: 1.25rem; /* Equivalent to size={20} for lucide-react */
+}
